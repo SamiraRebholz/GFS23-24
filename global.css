@@ -1,0 +1,249 @@
+/* Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@200&display=swap');
+
+/* Root Variables */
+:root {
+  --grey: #52575d;
+  --white: white;
+  --blue: #394867;
+  --dark-blue: #212A3E;
+}
+
+/* General Styles */
+html {
+  background-color: var(--white);
+}
+
+body {
+  font-size: 16px;
+}
+
+
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+/* Navbar Styles */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--blue);
+  color: var(--dark-blue);
+  z-index: 1234;
+}
+
+.fixed-navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 8px;
+}
+
+.fixed-navbar ul li {
+  margin-right: 5px;
+  font-size: 1.1vw;
+}
+
+.fixed-navbar ul li a {
+  font-family: Raleway, sans-serif;
+  color: var(--white);
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/*Button Styles*/
+
+
+/* Main Content Styles */
+.main-content {
+  padding-top: 30px;
+}
+
+#landing-title {
+  font-size: 6vw;
+  text-align: center;
+  color: var(--grey);
+  font-family: 'Oswald', sans-serif;
+}
+#landing-subtitle{
+  font-size: 4vw;
+  text-align: center; 
+  color: var(--grey);
+  font-family: 'Oswald', sans-serif;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  background-color: var(--blue);
+  border: 1.5px solid var(--blue);
+}
+
+/* Back Button Style */
+button.back {
+  padding-top: 45px;
+  padding-bottom: 7px;
+  border: none;
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  font-size: 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Grid Layout for Sections */
+#Klinische-Zeichen > *:not(h2) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, auto);
+  grid-template-rows: repeat(auto-fit, auto);
+  row-gap: 10px;
+}
+
+.zeichen {
+  border: 1.5px solid var(--blue);
+  width: 420px;
+  color: black;
+}
+
+.zeichen a {
+  color: black;
+}
+
+.zeichen a:hover {
+  text-decoration: none;
+}
+
+.zeichen li:not(:first-of-type) {
+  margin-left: 15px;
+}
+
+/* Hoover Sign Styles */
+.main-content.hoover > *:not(hr) {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(2, 1fe);
+  column-gap: 10px;
+  grid-template-areas: 
+    "foto text"
+    "caption text"
+  ;
+}
+
+.main-content.hoover figure {
+  grid-area: foto;
+}
+.main-content.hoover figcaption {
+  grid-area: caption;
+} 
+
+
+
+/* Media Queries */
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+  /* High-resolution screens style adjustments */
+  *{
+    font-size: 1vw;
+  }
+  .main-content *{
+    font-size: 1.5vw;
+  }
+    /*For the navbar*/
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    background-color: var(--blue);
+    color: var(--dark-blue);
+    z-index: 1234;
+  }
+  .fixed-navbar ul {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
+  .fixed-navbar ul li {
+    text-align: center;
+    padding: 10px 0;
+    color: var(--white);
+  }
+  .fixed-navbar ul li a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* Mobile styles */
+  .fixed-navbar ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: var(--blue);
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .fixed-navbar ul li {
+    text-align: center;
+    padding: 10px 0;
+    color: var(--white);
+  }
+
+  .fixed-navbar ul li a {
+    font-size: 16px; /* Min font size for small screens */
+  }
+
+  .fixed-navbar .menu-btn {
+    display: block;
+    background-color: var(--blue);
+    border: none;
+    color: var(--white);
+    font-family: Raleway, sans-serif;
+    font-size: 3.2vw;
+    cursor: pointer;
+  }
+  #Klinische-Zeichen > *:not(h2) {
+    grid-template-columns: 1fr;
+  }
+  .zeichen {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  /* Desktop styles */
+  .fixed-navbar .menu-btn {
+    display: none;
+  }
+
+  .fixed-navbar ul {
+    display: flex; /* Ensure the menu is visible */
+  }
+}

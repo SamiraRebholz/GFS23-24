@@ -1,0 +1,26 @@
+:root{
+  --grey: #52575d;
+  --white: #F1F6F9;
+  --blue: #394867;
+  --dark-blue: #394867;
+}
+
+td {
+    border-bottom: 1.5px solid var(--blue);
+}
+table{
+  border: 1.5px solid var(--blue);
+}
+table tr:last-child td{
+  border-bottom: none;
+}
+td{
+  text-align: left;
+}
+.align-top {
+  vertical-align: top;
+}
+.caption{
+  font-size: 12px;
+  color: black;
+}

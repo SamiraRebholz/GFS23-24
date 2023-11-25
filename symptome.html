@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptome</title>
+  <link href="global.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    .image-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+    }
+  </style>
+  <script>
+// Open the modal
+function openModal() {
+  document.getElementById('myModal').style.display = 'block';
+}
+
+// Close the modal
+function closeModal() {
+  document.getElementById('myModal').style.display = 'none';
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+  captionText.innerHTML = slides[slideIndex-1].alt;
+}
+
+  </script>
+</head>
+
+<body>
+  <div class="fixed-navbar">
+    <button class="menu-btn">
+      <span class="material-symbols-outlined">
+        menu
+      </span>
+    </button>
+    <ul>
+      <li class="recent"><a href="symptome.html">Symptome</a></li>
+      <li><a href="FolgeBegleiterkrankungen.html">Folge und Begleiterkrankungen</a></li>
+      <li><a href="diagnostik.html">Diagnostik</a></li>
+      <li><a href="pathophysiologie.html">Pathophysiologie</a></li>
+      <li><a href="Therapiemöglichkeiten.html">Therapiemöglichkeiten</a></li>
+      <li><a href="GeschlechtAlter.html">Geschlechts und Alter Verteilung</a></li>
+      <li><a href="Statistiken.html">Algemeine Statistiken</a></li>
+      <li><a href="geschichte.html">Geschichte</a></li>
+      <li><a href="Forschung.html">Forschung</a></li>
+      <li><a href="">Meinen Quellen</a></li>
+    </ul>
+  </div>
+  <main class="main-content">
+    <h1 class="title">Symptome</h1>
+    <hr>
+    <h2>Motorisch</h2>
+    <ul>
+      <li onclick="showImage('')">Paralyse</li>
+      <li src="Bilder/Schwäche.png" alt="Image 1" onclick="openModal();currentSlide(1)">Schwäche</li>
+      <li onclick="showImage('')">Tremor</li>
+      <li onclick="showImage('')">Parkinsonismus</li>
+      <li onclick="showImage('')">Dystonie</li>
+      <li onclick="showImage('')">Spastiken</li>
+      <li onclick="showImage('')">Tics</li>
+      <li onclick="showImage('')">Myoklonien</li>
+      <li onclick="showImage('')">Funktionelle Anfälle</li>
+      <li onclick="showImage('')">PPPD(Persistierender postural-perzeptiver Schwindel)</li>
+    </ul>
+    <hr>
+    <h2>Sensorisch</h2>
+    <ul>
+      <li></li>
+    </ul>
+    <hr>
+    <h2>Visuell</h2>
+    <hr>
+    <h2>Kognitiv</h2>
+    <hr>
+    <h2>Psychisch</h2>
+    <div class="image-container" id="imageContainer" style="background-color: transparent;">
+      <img src="" id="image">
+      <button onclick="hideImage()" style="display:block; margin: 0 auto; background: none; border: none; font-size: 20%;">
+        <img src="Bilder/close.svg" alt="close">
+      </button>
+    </div>
+  </main>
+</body>
+
+</html>
