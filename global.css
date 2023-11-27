@@ -113,8 +113,8 @@ button.back {
 /* Grid Layout for Sections */
 #Klinische-Zeichen > *:not(h2) {
   display: grid;
-  grid-template-columns: repeat(auto-fill, auto);
-  grid-template-rows: repeat(auto-fit, auto);
+  grid-auto-columns: minmax(100px, auto);
+  grid-auto-rows: minmax(50px, auto);
   row-gap: 10px;
 }
 
@@ -134,6 +134,9 @@ button.back {
 
 .zeichen li:not(:first-of-type) {
   margin-left: 15px;
+}
+#Klinische-Zeichen ul{
+  grid-column: span 2;
 }
 
 /* Hoover Sign Styles */

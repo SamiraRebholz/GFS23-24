@@ -8,11 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     event.stopPropagation(); // Prevent click from immediately propagating to document
   });
 
+  // Event listener for clicks on the entire document
   document.addEventListener('click', function(event) {
-    var isClickInsideMenu = menuList.contains(event.target) || menuButton.contains(event.target);
-
-    if (!isClickInsideMenu) {
-      // Hide the menu if click is outside of menu
+    if (menuList.style.display === 'block' && !menuButton.contains(event.target) && !menuList.contains(event.target)) {
+      // Hide the menu if click is outside of menu or menu button
       menuList.style.display = 'none';
     }
   });
