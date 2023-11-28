@@ -67,8 +67,25 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
+figcaption a{
+  color: black;
+}
 /*Button Styles*/
-
+img[alt="close"]{
+  height: 35pt;
+  width: 35pt;
+}
+button.back {
+  padding-top: 45px;
+  padding-bottom: 7px;
+  border: none;
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  font-size: 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 
 /* Main Content Styles */
 .main-content {
@@ -95,19 +112,6 @@ img {
 hr {
   background-color: var(--blue);
   border: 1.5px solid var(--blue);
-}
-
-/* Back Button Style */
-button.back {
-  padding-top: 45px;
-  padding-bottom: 7px;
-  border: none;
-  background-color: var(--blue);
-  position: absolute;
-  left: 0;
-  font-size: 15px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 /* Grid Layout for Sections */
@@ -143,7 +147,7 @@ button.back {
 .main-content.hoover > *:not(hr) {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: repeat(2, 1fe);
+  grid-template-rows: repeat(2, 1fr);
   column-gap: 10px;
   grid-template-areas: 
     "foto text"
@@ -157,6 +161,9 @@ button.back {
 .main-content.hoover figcaption {
   grid-area: caption;
 } 
+.main-content.hoover #text {
+  grid-area: text;
+}
 
 
 

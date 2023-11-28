@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Symptome</title>
-  <link href="global.css" rel="stylesheet" />
+  <link href="./styles/global.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style>
@@ -48,7 +48,7 @@
     <h2>Motorisch</h2>
     <ul>
       <li onclick="showImage('')">Paralyse</li>
-      <li onclick="showImage('Bilder/Schwäche.png')">Schwäche</li>
+      <li onclick="showImage('./public/images/weakness.png')">Schwäche</li>
       <li onclick="showImage('')">Tremor</li>
       <li onclick="showImage('')">Parkinsonismus</li>
       <li onclick="showImage('')">Dystonie</li>
@@ -72,7 +72,7 @@
     <div class="image-container" id="imageContainer" style="background-color: transparent;">
       <img src="" id="image">
       <button onclick="hideImage()" style="display:block; margin: 0 auto; background: none; border: none; font-size: 20%;">
-        <img src="Bilder/close.svg" alt="close">
+        <img src="./public/images/close.svg" alt="close">
       </button>
     </div>
   </main>
