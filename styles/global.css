@@ -144,26 +144,6 @@ hr {
 }
 
 /* Hoover Sign Styles */
-.main-content.hoover > *:not(hr) {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 10px;
-  grid-template-areas: 
-    "foto text"
-    "caption text"
-  ;
-}
-
-.main-content.hoover figure {
-  grid-area: foto;
-}
-.main-content.hoover figcaption {
-  grid-area: caption;
-} 
-.main-content.hoover #text {
-  grid-area: text;
-}
 
 
 
@@ -204,7 +184,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   /* Mobile styles */
   .fixed-navbar ul {
     position: absolute;
@@ -236,7 +216,7 @@ hr {
     border: none;
     color: var(--white);
     font-family: Raleway, sans-serif;
-    font-size: 3.2vw;
+    font-size: 1vw;
     cursor: pointer;
   }
   #Klinische-Zeichen > *:not(h2) {
