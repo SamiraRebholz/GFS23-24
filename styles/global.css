@@ -1,28 +1,36 @@
 /* Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+/*Raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@200&display=swap');
+/*Oswald*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/*Open sans*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*Roboto*/
+
 
 /* Root Variables */
 :root {
-  --grey: #52575d;
-  --white: white;
-  --blue: #394867;
-  --dark-blue: #212A3E;
+  /*--background: #FFFFF0;*/
+  --background: #F4F9FC;
+  --navbar: #5BB12F;
+  --nav-text: #FFFFF0;
+  --text: #708090;
+  --button: #5BB12F;
+  --button-text: #FFFFF0;
 }
 
-/* General Styles */
+/* General Styles*/
 html {
-  background-color: var(--white);
+  background-color: var(--background);
 }
 
 body {
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text);
 }
 
-
-* {
-  font-family: Helvetica, sans-serif;
-}
 
 /* Navbar Styles */
 .fixed-navbar {
@@ -30,8 +38,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--blue);
-  color: var(--dark-blue);
+  background-color: var(--navbar);
+  color: var(--nav-text);
   z-index: 1234;
 }
 
@@ -49,8 +57,8 @@ body {
 }
 
 .fixed-navbar ul li a {
-  font-family: Raleway, sans-serif;
-  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  color: var(--nav-text);
 }
 
 /* Link Styles */
@@ -67,19 +75,22 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
-figcaption a{
+
+figcaption a {
   color: black;
 }
+
 /*Button Styles*/
-img[alt="close"]{
+img[alt="close"] {
   height: 35pt;
   width: 35pt;
 }
+
 button.back {
   padding-top: 45px;
   padding-bottom: 7px;
   border: none;
-  background-color: var(--blue);
+  background-color: var(--button);
   position: absolute;
   left: 0;
   font-size: 15px;
@@ -95,27 +106,30 @@ button.back {
 #landing-title {
   font-size: 6vw;
   text-align: center;
-  color: var(--grey);
-  font-family: 'Oswald', sans-serif;
+  color: var(--text);
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
 }
-#landing-subtitle{
+
+#landing-subtitle {
   font-size: 4vw;
-  text-align: center; 
-  color: var(--grey);
-  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: var(--text);
+  font-family: 'Open Sans', sans-serif;
 }
+
 img {
   width: 100%;
   height: auto;
 }
 
 hr {
-  background-color: var(--blue);
-  border: 1.5px solid var(--blue);
+  background-color: #007BA7;
+  border: 1.5px solid #007BA7;
 }
 
 /* Grid Layout for Sections */
-#Klinische-Zeichen > *:not(h2) {
+#Klinische-Zeichen>*:not(h2) {
   display: grid;
   grid-auto-columns: minmax(100px, auto);
   grid-auto-rows: minmax(50px, auto);
@@ -139,34 +153,51 @@ hr {
 .zeichen li:not(:first-of-type) {
   margin-left: 15px;
 }
-#Klinische-Zeichen ul{
+
+#Klinische-Zeichen ul {
   grid-column: span 2;
 }
 
 /* Hoover Sign Styles */
+#text {
+  float: right;
+  width: 50vw; /* Adjust the width as needed */
+}
 
+figure {
+  float: left;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
 
+figure > img{
+  width: 40vw;
+  height: auto;
+}
 
 /* Media Queries */
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
+
   /* High-resolution screens style adjustments */
-  *{
+  * {
     font-size: 1vw;
   }
-  .main-content *{
+
+  .main-content * {
     font-size: 1.5vw;
   }
-    /*For the navbar*/
+
+  /*For the navbar*/
   .fixed-navbar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: auto;
-    background-color: var(--blue);
-    color: var(--dark-blue);
+    background-color: var(--navbar);
+    color: var(--nav-text);
     z-index: 1234;
   }
+
   .fixed-navbar ul {
     position: absolute;
     top: 50%;
@@ -174,18 +205,23 @@ hr {
     transform: translateY(-50%);
     flex-direction: column;
   }
+
   .fixed-navbar ul li {
     text-align: center;
     padding: 10px 0;
-    color: var(--white);
+    color: var(--nav-text);
   }
+
   .fixed-navbar ul li a {
     font-size: 16px;
   }
 }
 
 @media (max-width: 900px) {
-  /* Mobile styles */
+   /* Mobile styles */
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
   .fixed-navbar ul {
     position: absolute;
     top: 100%;
@@ -193,7 +229,7 @@ hr {
     flex-direction: column;
     width: 100%;
     display: none;
-    background-color: var(--blue);
+    background-color: var(--navbar);
     margin: 0;
     padding: 0;
     z-index: 1000;
@@ -203,37 +239,56 @@ hr {
   .fixed-navbar ul li {
     text-align: center;
     padding: 10px 0;
-    color: var(--white);
+    color: var(--nav-text);
   }
 
   .fixed-navbar ul li a {
-    font-size: 16px; /* Min font size for small screens */
+    font-size: 16px;
+    /* Min font size for small screens */
   }
 
   .fixed-navbar .menu-btn {
     display: block;
-    background-color: var(--blue);
+    background-color: var(--navbar);
     border: none;
-    color: var(--white);
-    font-family: Raleway, sans-serif;
+    color: var(--nav-text);
+    font-family: 'Roboto', sans-serif;
     font-size: 1vw;
     cursor: pointer;
   }
-  #Klinische-Zeichen > *:not(h2) {
+
+  #Klinische-Zeichen>*:not(h2) {
     grid-template-columns: 1fr;
   }
+
   .zeichen {
     width: 100%;
+  }
+  /* Hoover Sign Styles */
+  #text {
+    clear: right;
+    width: auto; /* Adjust the width as needed */
+  }
+
+  figure {
+    clear: left;
+  }
+
+  figure > img{
+    width: 90vw;
+    height: auto;
   }
 }
 
 @media screen and (min-width: 901px) {
+
   /* Desktop styles */
   .fixed-navbar .menu-btn {
     display: none;
   }
 
   .fixed-navbar ul {
-    display: flex; /* Ensure the menu is visible */
+    display: flex;
+    /* Ensure the menu is visible */
   }
 }
