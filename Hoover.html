@@ -8,6 +8,7 @@
   <title>Hoover Zeichen</title>
   <link href="./styles/global.css" rel="stylesheet" />
   <script src="./script/menu.js"></script>
+  <script src="./script/videoModal.js"></script>
 </head>
 
 <body>
@@ -36,8 +37,12 @@
     <hr>
     <figure>
       <img src="./public/images/hooverSign.png" alt="Untersuchung mittels Hoover Zeichen">
-      <figcaption>Quelle: <a href="https://pn.bmj.com/content/1/1/50">Jon Stone, Sharpe M. Hoover’s sign. Practical Neurology.</a></figcaption>
-    </figure> 
+      <figcaption>Quelle: <a href="https://pn.bmj.com/content/1/1/50">Jon Stone, Sharpe M. Hoover’s sign. Practical
+          Neurology.</a></figcaption>
+      <div style="text-align: center; padding-top: 2pt;">
+        <button onclick="openVideoModal('https://youtu.be/ylQ_CF8XWnk')">Open Video</button>
+      </div>
+    </figure>
     <div id="text">
       <h2>Ablauf einer Untersuchung mit Hilfe des Hoover Zeichen:</h2>
       <ul>
@@ -45,7 +50,13 @@
         <li>Hemiparese ---> 1 Bein muss "besser" sein</li>
       </ul>
     </div>
-  </main>
+
+    <div id="videoModal">
+      <div id="videoContainer">
+        <button id="closeButton" onclick="hideVideo()">Close Video</button>
+        <video id="video" controls></video>
+      </div>
+    </div>
 </body>
 
 </html>
