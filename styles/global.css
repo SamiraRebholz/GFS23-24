@@ -19,6 +19,7 @@
   --button: #5BB12F;
   --shadow-color: rgb(91, 177, 47, 0.5);
   --button-text: #FFFFF0;
+  --hr-color: #7DBF73;
 }
 
 /* General Styles*/
@@ -65,20 +66,23 @@ body {
 /* Link Styles */
 a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text);
 }
 
 a:visited {
   text-decoration: none;
-  color: var(--grey);
+  color: var(--text);
 }
 
 a:hover {
   text-decoration: underline;
 }
-
+li a span{
+  padding: 0;
+  margin: 0;
+}
 figcaption a {
-  color: black;
+  color: var(--text);
 }
 
 /*Button Styles*/
@@ -170,8 +174,8 @@ img {
 }
 
 hr {
-  background-color: #007BA7;
-  border: 1.5px solid #007BA7;
+  background-color: var(--hr-color);
+  border: 1.5px solid var(--hr-color);
 }
 
 /* Grid Layout for Sections */
@@ -185,11 +189,11 @@ hr {
 .zeichen {
   border: 1.5px solid var(--blue);
   width: 420px;
-  color: black;
+  color: var(--text);
 }
 
 .zeichen a {
-  color: black;
+  color: var(--text);
 }
 
 .zeichen a:hover {

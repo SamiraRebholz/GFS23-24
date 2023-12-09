@@ -1,15 +1,21 @@
-:root{
-  --grey: #52575d;
-  --white: #F1F6F9;
-  --blue: #394867;
-  --dark-blue: #394867;
+/* Root Variables */
+:root {
+  /*--background: #FFFFF0;*/
+  --background: #F4F9FC;
+  --navbar: #5BB12F;
+  --nav-text: #FFFFF0;
+  --text: #708090;
+  --button: #5BB12F;
+  --shadow-color: rgb(91, 177, 47, 0.5);
+  --button-text: #FFFFF0;
+  --table-border: #7DBF73;
 }
 
 td {
-    border-bottom: 1.5px solid var(--blue);
+    border-bottom: 1.8px solid var(--table-border);
 }
 table{
-  border: 1.5px solid var(--blue);
+  border: 1.8px solid var(--table-border);
 }
 table tr:last-child td{
   border-bottom: none;
@@ -22,5 +28,5 @@ td{
 }
 .caption{
   font-size: 12px;
-  color: black;
+  color: var(--text);
 }
