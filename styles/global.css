@@ -84,7 +84,9 @@ li a span{
 figcaption a {
   color: var(--text);
 }
-
+div > a{
+  text-decoration: underline;
+}
 /*Button Styles*/
 img[alt="close"] {
   height: 35pt;
@@ -244,6 +246,9 @@ figure > img{
   body{
     font-family: 'Open Sans', sans-serif;
   }
+  .fixed-navbar{
+    height: 4vh;
+  }
   .fixed-navbar ul {
     position: absolute;
     top: 100%;
@@ -275,8 +280,9 @@ figure > img{
     border: none;
     color: var(--nav-text);
     font-family: 'Roboto', sans-serif;
-    font-size: 1vw;
+    font-size: 1.2vw;
     cursor: pointer;
+    padding: 0;
   }
 
   #Klinische-Zeichen>*:not(h2) {
