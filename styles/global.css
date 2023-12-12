@@ -48,6 +48,7 @@ body {
 .fixed-navbar ul {
   list-style: none;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   padding: 0;
   margin: 8px;
@@ -149,7 +150,9 @@ button:hover {
   bottom: -2.7vw;
   left: 50%;
 }
-
+li a span.material-symbols-outlined{
+  font-size: 1.8vw;
+}
 /* Main Content Styles */
 .main-content {
   padding-top: 30px;
