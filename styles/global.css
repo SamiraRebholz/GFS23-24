@@ -150,7 +150,7 @@ button:hover {
   bottom: -2.7vw;
   left: 50%;
 }
-li a span.material-symbols-outlined{
+.material-symbols-outlined{
   font-size: 1.8vw;
 }
 /* Main Content Styles */
