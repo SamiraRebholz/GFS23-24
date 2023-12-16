@@ -4,9 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@200&display=swap');
 /*Oswald*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-/*Open sans*/
+/*Open sans,Text*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-/*Roboto*/
+/*Roboto, navbar*/
+/*--------------*/
+/* Für Montserrat (Navbar) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Für Roboto (restlicher Text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 
 /* Root Variables */
@@ -29,7 +35,7 @@ html {
 
 body {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text);
 }
 
@@ -56,11 +62,11 @@ body {
 
 .fixed-navbar ul li {
   margin-right: 5px;
-  font-size: 1.1vw;
+  font-size: 0.96vw;
 }
 
 .fixed-navbar ul li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--nav-text);
 }
 
@@ -92,6 +98,7 @@ div > a{
 img[alt="close"] {
   height: 35pt;
   width: 35pt;
+  color: var(--button);
 }
 
 button.back {
@@ -146,9 +153,9 @@ button:hover {
 
 #closeButton {
   cursor: pointer;
-  position: absolute;
-  bottom: -2.7vw;
-  left: 50%;
+  position: fixed;
+  bottom: 30%;
+  left: 45%;
 }
 .material-symbols-outlined{
   font-size: 1.8vw;
@@ -162,7 +169,8 @@ button:hover {
   font-size: 6vw;
   text-align: center;
   color: var(--text);
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
 }
 
@@ -170,7 +178,8 @@ button:hover {
   font-size: 4vw;
   text-align: center;
   color: var(--text);
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -216,7 +225,7 @@ hr {
 /* Hoover Sign Styles */
 #text {
   float: right;
-  width: 50vw; /* Adjust the width as needed */
+  width: 60vw; /* Adjust the width as needed */
 }
 
 figure {
