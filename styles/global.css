@@ -239,6 +239,27 @@ figure > img{
   width: 40vw;
   height: auto;
 }
+/*Symptom Styles*/
+.overlay {
+  display: none; /* Versteckt die Überlagerung standardmäßig */
+  position: fixed; /* Positioniert die Überlagerung über dem gesamten Bildschirm */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparenter Hintergrund */
+  backdrop-filter: blur(10px); /* Verschwimmt den Hintergrund */
+  z-index: 998; /* Stellt sicher, dass die Überlagerung unter dem Modal liegt */
+}
+
+.image-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
 
 /* Media Queries */
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
