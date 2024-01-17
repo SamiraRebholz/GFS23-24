@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptome</title>
+  <link href="./styles/global.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/table.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    .image-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+    }
+  </style>
+  <script src="./script/modal.js"></script> 
+  <script src="./script/menu.js"></script>
+</head>
+
+<body>
+  <div class="fixed-navbar">
+    <button class="menu-btn">
+      <span class="material-symbols-outlined">
+        menu
+      </span>
+    </button>
+    <ul>
+      <li><a href="./index.html"><span class="material-symbols-outlined">
+home
+</span></a></li>
+      <li><a href="symptome.html">Symptome</a></li>
+      <li><a href="FolgeBegleiterkrankungen.html">Folge und Begleiterkrankungen</a></li>
+      <li><a href="diagnostik.html">Diagnostik</a></li>
+      <li><a href="pathophysiologie.html">Pathophysiologie</a></li>
+      <li><a href="Therapiemöglichkeiten.html">Therapiemöglichkeiten</a></li>
+      <li><a href="GeschlechtAlter.html">Geschlechts und Alter Verteilung</a></li>
+      <li><a href="Statistiken.html">Algemeine Statistiken</a></li>
+      <li><a href="geschichte.html">Geschichte</a></li>
+      <li><a href="Forschung.html">Forschung</a></li>
+      <li><a href="">Meinen Quellen</a></li>
+    </ul>
+  </div>
+  <main class="main-content">
+    <h1 class="title">Symptome</h1>
+    <hr>
+    <details>
+    <summary>DSM-5, ICD-10 und ICD-11 Klassifizierungen</summary>
+    <table>
+      <thead>
+        <th colspan="3">Diagnostic division of coexistent functional neurological and somatic symptoms</th>
+        <tr>
+          <th></th>
+          <th>Motor Symptoms</th>
+          <th>Non-Motor Symptoms (Pain and Fatigue)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="align-top">DSM-5</td>
+          <td>Somatic Symptom and Related Disorders<br> “Motor functional neurological symptom (conversion)<br> disorder
+            with abnormal movements or weakness”</td>
+          <td>Somatic Symptom and Related Disorders<br> Associated pain or fatigue is labeled as “somatic symptom<br>
+            disorder”</td>
+        </tr>
+        <tr>
+          <td class="align-top">ICD-10</td>
+          <td class="align-top">Psychiatry (F)<br> “Motor dissociative (conversion) disorder” (F.44.4)</td>
+          <td>Psychiatry (F)<br> “Persistent somatoform pain disorder” (F45.4)<br> Musculoskeletal (M)<br>
+            “Fibromyalgia” (M79.7)<br> Symptoms, signs and abnormal clinical and laboratory<br> findings, not elsewhere
+            classified (R)<br> “Chronic fatigue syndrome” (R53.82)</td>
+        </tr>
+        <tr>
+          <td class="align-top">ICD-11</td>
+          <td>Diseases of the nervous system (08)<br> “Functional parkinsonism” (8A00.3)<br> “Functional dystonia”
+            (8A02.3)<br> “Functional tremor” (8A04.4)<br> Mental, behavioral or neurodevelopmental disorders (06)<br>
+            “Dissociative neurologic symptom disorder with movement<br> disturbance (6B60.81), gait disturbance
+            (6B60.7), with<br> paresis or weakness (6B60.6)”</td>
+          <td class="align-top">Symptoms, signs or clinical findings, not elsewhere<br> classified (21)<br> “Chronic
+            widespread pain (MG30.01)<br> “Fatigue” (MG22)</td>
+        </tr>
+        <tr>
+          <td>Gupta and Lang criteria</td>
+          <td>Psychogenic movement disorders</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Fahn and Williams criteria</td>
+          <td>Psychogenic movement disorders</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Shill and Gerber criteria</td>
+          <td>Psychogenic movement disorders</td>
+          <td>Excessive pain or fatigue are specified as primary criteria</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="caption">
+      Abbreviations: DSM-5, Diagnostic and Statistical Manual of Mental Disorders, 5th Edition; ICD-10 and 11,
+      International Classification of Diseases, 10th and 11th Edition—Chapter/Section, “Diagnostic Label,” (Code).<br>
+      Quelle: <a href="https://doi.org/10.1016/j.ncl.2023.02.002">Functional Movement Disorder Assessment and Treatment</a>
+    </div>
+    </details>
+    <hr>
+    <h2>Motorisch</h2>
+    <ul>
+      <li>Paralyse</li>
+      <li onclick="showImage('./public/images/weakness.png')">Schwäche</li>
+      <li>Tremor</li>
+      <li>Parkinsonismus</li>
+      <li>Dystonie</li>
+      <li>Spastiken</li>
+      <li>Tics</li>
+      <li>Myoklonien</li>
+      <li>Funktionelle Anfälle</li>
+      <li>PPPD(Persistierender postural-perzeptiver Schwindel)</li>
+    </ul>
+    <hr>
+    <h2>Sensorisch</h2>
+    <ul>
+      <li></li>
+    </ul>
+    <hr>
+    <h2>Visuell</h2>
+    <hr>
+    <h2>Kognitiv</h2>
+    <hr>
+    <h2>Psychisch</h2>
+    <div class="image-container" id="imageContainer" style="background-color: transparent;">
+      <img src="" id="image">
+      <button onclick="hideImage()" style="display:block; margin: 0 auto; background: none; border: none; font-size: 20%;">
+        <img src="./public/images/close.svg" alt="close">
+      </button>
+    </div>
+  </main>
+</body>
+
+</html>
