@@ -4,9 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@200&display=swap');
 /*Oswald*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-/*Open sans*/
+/*Open sans,Text*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-/*Roboto*/
+/*Roboto, navbar*/
+/*--------------*/
+/* Für Montserrat (Navbar) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Für Roboto (restlicher Text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 
 /* Root Variables */
@@ -29,7 +35,7 @@ html {
 
 body {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text);
 }
 
@@ -48,6 +54,7 @@ body {
 .fixed-navbar ul {
   list-style: none;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   padding: 0;
   margin: 8px;
@@ -55,11 +62,11 @@ body {
 
 .fixed-navbar ul li {
   margin-right: 5px;
-  font-size: 1.1vw;
+  font-size: 0.96vw;
 }
 
 .fixed-navbar ul li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--nav-text);
 }
 
@@ -91,6 +98,7 @@ div > a{
 img[alt="close"] {
   height: 35pt;
   width: 35pt;
+  color: var(--button);
 }
 
 button.back {
@@ -145,11 +153,13 @@ button:hover {
 
 #closeButton {
   cursor: pointer;
-  position: absolute;
-  bottom: -2.7vw;
-  left: 50%;
+  position: fixed;
+  bottom: 30%;
+  left: 45%;
 }
-
+.material-symbols-outlined{
+  font-size: 1.8vw;
+}
 /* Main Content Styles */
 .main-content {
   padding-top: 30px;
@@ -159,7 +169,8 @@ button:hover {
   font-size: 6vw;
   text-align: center;
   color: var(--text);
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
 }
 
@@ -167,7 +178,8 @@ button:hover {
   font-size: 4vw;
   text-align: center;
   color: var(--text);
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -213,7 +225,7 @@ hr {
 /* Hoover Sign Styles */
 #text {
   float: right;
-  width: 50vw; /* Adjust the width as needed */
+  width: 60vw; /* Adjust the width as needed */
 }
 
 figure {
@@ -226,6 +238,27 @@ figure {
 figure > img{
   width: 40vw;
   height: auto;
+}
+/*Symptom Styles*/
+.overlay {
+  display: none; /* Versteckt die Überlagerung standardmäßig */
+  position: fixed; /* Positioniert die Überlagerung über dem gesamten Bildschirm */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparenter Hintergrund */
+  backdrop-filter: blur(10px); /* Verschwimmt den Hintergrund */
+  z-index: 998; /* Stellt sicher, dass die Überlagerung unter dem Modal liegt */
+}
+
+.image-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
 /* Media Queries */
