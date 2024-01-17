@@ -38,19 +38,11 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--text);
 }
-
-
-/* Navbar Styles */
-.fixed-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--navbar);
-  color: var(--nav-text);
-  z-index: 1234;
+::-webkit-scrollbar {
+  width: 0; /* Breite auf 0 setzen */
 }
 
+/* Navbar Styles */
 .fixed-navbar ul {
   list-style: none;
   display: flex;
@@ -64,10 +56,24 @@ body {
   margin-right: 5px;
   font-size: 0.96vw;
 }
+.nav{
+  position: relative;
+}
+.fixed-navbar {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content; /* Anpassen der Breite nach Bedarf */
+  border-radius: 10rem; /* Hinzufügen abgerundeter Ecken */
+  box-shadow: 0px 0.4rem 0.7rem rgba(0, 0, 0, 0.2); /* 3D-Effekt durch Schatten */
+  background-color: var(--navbar); /* Hintergrundfarbe anpassen */
+}
 
-.fixed-navbar ul li a {
+.fixed-navbar a {
+  color: var(--nav-text); /* Textfarbe anpassen */
+  text-decoration: none;
+  padding: 0.3px; /* Anpassen des Abstands zwischen den Links */
   font-family: 'Montserrat', sans-serif;
-  color: var(--nav-text);
 }
 
 /* Link Styles */
@@ -80,7 +86,9 @@ a:visited {
   text-decoration: none;
   color: var(--text);
 }
-
+.fixed-navbar a:visited{
+  color: var(--nav-text);
+}
 a:hover {
   text-decoration: underline;
 }
@@ -104,8 +112,10 @@ img[alt="close"] {
 button.back {
   padding-top: 45px;
   padding-bottom: 7px;
+  height: max-content;
   border: none;
   background-color: var(--button);
+  color: var(--button-text);
   position: absolute;
   left: 0;
   font-size: 15px;
@@ -113,8 +123,8 @@ button.back {
   border-bottom-left-radius: 10px;
 }
 button {
-  background-color: #5BB12F; /* Eucalyptus Green */
-  color: #FFFFF0; /* Ivory White */
+  background-color: var(--button); /* Eucalyptus Green */
+  color: var(--button-text); /* Ivory White */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -122,6 +132,7 @@ button {
   font-size: 16px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(var(--button), 0.7);
+  height: max-content;
 }
 button:hover {
   background-color: #7ED957; /* Lighter shade of Eucalyptus Green */
@@ -225,7 +236,7 @@ hr {
 /* Hoover Sign Styles */
 #text {
   float: right;
-  width: 60vw; /* Adjust the width as needed */
+  width: 57vw; /* Adjust the width as needed */
 }
 
 figure {
@@ -247,7 +258,7 @@ figure > img{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparenter Hintergrund */
+  /*background-color: rgba(0, 0, 0, 0.3);  Semi-transparenter Hintergrund */
   backdrop-filter: blur(10px); /* Verschwimmt den Hintergrund */
   z-index: 998; /* Stellt sicher, dass die Überlagerung unter dem Modal liegt */
 }
@@ -268,7 +279,22 @@ figure > img{
   * {
     font-size: 1vw;
   }
-
+  .fixed-navbar {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    height: 3vmax;
+  }
+  .fixed-navbar a{
+    font-size: 1vmax;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  div.caption, div.caption a{
+    font-size: 1vw;
+  }
+  
   .main-content * {
     font-size: 1.5vw;
   }
