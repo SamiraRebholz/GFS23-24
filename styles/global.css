@@ -72,7 +72,7 @@ body {
 .fixed-navbar a {
   color: var(--nav-text); /* Textfarbe anpassen */
   text-decoration: none;
-  padding: 0.3px; /* Anpassen des Abstands zwischen den Links */
+  padding: 2.5px; /* Anpassen des Abstands zwischen den Links */
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -173,7 +173,7 @@ button:hover {
 }
 /* Main Content Styles */
 .main-content {
-  padding-top: 30px;
+  padding-top: 1.4vmax;
 }
 
 #landing-title {
@@ -297,6 +297,7 @@ figure > img{
   
   .main-content * {
     font-size: 1.5vw;
+    padding-top: 3.4vmax;
   }
 }
 
