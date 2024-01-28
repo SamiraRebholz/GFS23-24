@@ -7,19 +7,33 @@
   <title>Symptome</title>
   <link href="./styles/global.css" rel="stylesheet" />
   <link href="./styles/symptome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/description.css">
   <link rel="stylesheet" href="./styles/table.css" />
+<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <style>
     .image-container {
       display: none;
       position: fixed;
+      /*top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);*/
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+    }
+    .image-container img {
+      border-radius: 1rem;
+      width: auto;
+      height: auto;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 999;
     }
     .material-symbols-outlined {
       font-variation-settings:
@@ -30,6 +44,10 @@
     }
     button[id="close"]{
       color: #5BB12F;
+      position: fixed;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%);
     }
   </style>
   <script src="./script/modal.js"></script> 
@@ -40,7 +58,7 @@
   <div class="overlay"></div> <!-- Hinzufügen der Überlagerung -->
   <div class="fixed-navbar">
     <button class="menu-btn">
-      <span class="material-symbols-outlined">
+      <span class="material-icons">
         menu
       </span>
     </button>
@@ -58,7 +76,8 @@
   <main class="main-content">
     <h1 class="title">Symptome</h1>
     <hr>
-    <h2>DSM-5, ICD-10 und ICD-11 Klassifizierungen</h2>
+    <details>
+    <summary>DSM-5, ICD-10 und ICD-11 Klassifizierungen</summary>
     <table>
       <thead>
         <th colspan="3">Diagnostic division of coexistent functional neurological and somatic symptoms</th>
@@ -114,6 +133,7 @@
       International Classification of Diseases, 10th and 11th Edition—Chapter/Section, “Diagnostic Label,” (Code).<br>
       Quelle: <a href="https://doi.org/10.1016/j.ncl.2023.02.002">Functional Movement Disorder Assessment and Treatment</a>
     </div>
+  </details>
     <hr>
     <h2>Motorisch & Sensorisch</h2>
     <section id="symptom-kategorie">
@@ -133,13 +153,13 @@
     </ul>-->
     <div class="card">
       <img src="./public/images/tetraparese.jpeg" alt="Big Photo" onclick="showImage('./public/images/tetraparese.jpeg')">
-      <div class="card-text" onclick="openModal()">
+      <div class="card-text" onclick="openModal()" data-modal-id="tetraparese">
         Tetraparese
       </div>
     </div>
     <div class="card">
       <img src="./public/images/hemiparese.jpeg" alt="Big Photo" onclick="showImage('./public/images/hemiparese.jpeg')">
-      <div class="card-text" onclick="openModal()">
+      <div class="card-text" onclick="openModal()" data-modal-id="hemiparese">
         Hemiparese
       </div>
     </div>
@@ -206,15 +226,41 @@
     <h2>Kognitiv</h2>
     <hr>
     <h2>Psychisch</h2>
-    <div class="image-container" id="imageContainer" style="background-color: transparent;">
+    <div class="image-container" id="imageContainer" style="background-color: rgba(0, 0, 0, 0.4);">
       <img src="" id="image">
       <button onclick="hideImage()" style="display:block; margin: 0 auto; background: none; border: none; font-size: 20%;" id="close">
-        <span class="material-symbols-outlined">
+        <span class="material-icons md3rem">
           close
         </span>
       </button>
     </div>
   </main>
+  <!-- The modals -->
+<div id="tetraparese" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Tetraparese</h3>
+    <h4>tetra = vier, parese = Lähmung
+      <br>Auch genannt: 
+      <ul>
+        <li>Tetraplegie</li>
+        <li>Quadriplegie</li>
+      </ul>
+    </h4>
+    <p>Als Tetraparese wird die unvollständige (= inkomplette) Lähmung aller vier Extrimitäten bezeichnet.
+      <br>Wenn die Extrimitäten vollständig gelähmt sind, würde man von der Tetraplegie sprechen, welche bei FND ebenfalls vorkommen kann.
+      <br>Es können ebenfalls Rumpf-, Blasen- und Mastdarmfunktionen betroffen sein.
+    </p>
+  </div>
+</div>
+
+<div id="hemiparese" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Modal Content 2</p>
+  </div>
+</div>
+<script src="./script/description.js"></script>
 </body>
 
 </html>

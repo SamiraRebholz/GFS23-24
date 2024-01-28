@@ -168,9 +168,10 @@ button:hover {
   bottom: 30%;
   left: 45%;
 }
-.material-symbols-outlined{
-  font-size: 1.8vw;
+.material-icons{
+  font-size: 100px;
 }
+.material-icons.md3rem { font-size: 3rem; }
 /* Main Content Styles */
 .main-content {
   padding-top: 1.4vmax;
@@ -308,6 +309,10 @@ figure > img{
   }
   .fixed-navbar{
     height: 4vh;
+    width: 100%;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
   }
   .fixed-navbar ul {
     position: absolute;
