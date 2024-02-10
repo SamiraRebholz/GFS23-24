@@ -22,6 +22,7 @@
   --navbar: #5BB12F;
   --nav-text: #FFFFF0;
   --text: #708090;
+  --darker-text: #505050; 
   --button: #5BB12F;
   --shadow-color: rgb(91, 177, 47, 0.5);
   --button-text: #FFFFF0;
@@ -41,7 +42,13 @@ body {
 ::-webkit-scrollbar {
   width: 0; /* Breite auf 0 setzen */
 }
-
+/*Span Styles*/
+.underline {
+  text-decoration: underline;
+}
+.darker-text{
+  color: var(--darker-text);
+}
 /* Navbar Styles */
 .fixed-navbar ul {
   list-style: none;
