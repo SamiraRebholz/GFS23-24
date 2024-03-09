@@ -56,12 +56,12 @@ body {
   align-items: center;
   justify-content: space-evenly;
   padding: 0;
-  margin: 8px;
+  margin: 0.4rem;
 }
 
 .fixed-navbar ul li {
-  margin-right: 5px;
-  font-size: 0.96vw;
+  margin: /*5px*/ 0rem 0.2rem;
+  font-size: /*0.96vw*/ 0.8rem;
 }
 .nav{
   position: relative;
@@ -145,6 +145,7 @@ button:hover {
   background-color: #7ED957; /* Lighter shade of Eucalyptus Green */
   color: #FFFFFF; /* White */
 }
+
 #videoModal {
   display: none;
   position: fixed;
@@ -208,7 +209,7 @@ img {
 
 hr {
   background-color: var(--hr-color);
-  border: 1.5px solid var(--hr-color);
+  border: 0.5px solid var(--hr-color);
 }
 
 /* Grid Layout for Sections */

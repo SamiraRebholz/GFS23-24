@@ -12,10 +12,10 @@
 }
 
 td {
-    border-bottom: 1.8px solid var(--table-border);
+    border-bottom: 0.6px solid var(--table-border);
 }
 table{
-  border: 1.8px solid var(--table-border);
+  border: 0.6px solid var(--table-border);
 }
 table tr:last-child td{
   border-bottom: none;
@@ -27,6 +27,6 @@ td{
   vertical-align: top;
 }
 .caption{
-  font-size: 12px;
+  font-size: 0.78rem;
   color: var(--text);
 }
