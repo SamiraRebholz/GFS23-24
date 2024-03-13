@@ -20,9 +20,12 @@
   /*--background: #FFFFF0;*/
   --background: #F4F9FC;
   --navbar: #5BB12F;
+  --navbar-glass: rgba(91, 177, 47, 0.9)
   --nav-text: #FFFFF0;
-  --text: #708090;
-  --darker-text: #505050; 
+  /*--text: #708090;*/
+  --text: black;
+  /*--darker-text: #505050;*/
+  --darker-text: black;
   --button: #5BB12F;
   --shadow-color: rgb(91, 177, 47, 0.5);
   --button-text: #FFFFF0;
@@ -316,7 +319,7 @@ figure > img{
     font-family: 'Open Sans', sans-serif;
   }
   .fixed-navbar{
-    height: 4vh;
+    /*height: 4vh;*/
     width: 100%;
     border-radius: 0;
     position: fixed;
@@ -329,7 +332,8 @@ figure > img{
     flex-direction: column;
     width: 100%;
     display: none;
-    background-color: var(--navbar);
+    background-color: /*var(--navbar-glass)*/ rgba(91,177,47,0.6);
+    backdrop-filter: blur(0.9rem);
     margin: 0;
     padding: 0;
     z-index: 1000;

@@ -4,7 +4,8 @@
   --background: #F4F9FC;
   --navbar: #5BB12F;
   --nav-text: #FFFFF0;
-  --text: #708090;
+  /*--text: #708090;*/
+  --text: black;
   --button: #5BB12F;
   --shadow-color: rgb(91, 177, 47, 0.5);
   --button-text: #FFFFF0;
