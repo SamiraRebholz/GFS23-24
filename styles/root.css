@@ -1,0 +1,15 @@
+:root {
+    /*--background: #FFFFF0;*/
+    --background: #F4F9FC;
+    --navbar: #5BB12F;
+    --navbar-glass: rgba(91, 177, 47, 0.9);
+    --nav-text: #FFFFF0;
+    --text: #708090;
+    --button: #5BB12F;
+    --shadow-color: rgb(91, 177, 47, 0.5);
+    --button-text: #FFFFF0;
+    --hr-color: #7DBF73;
+    --table-border: #7DBF73;
+    --modal-bg: rgba(255, 255, 255, 0.3);
+    --modal-text: #708090;	
+  }
