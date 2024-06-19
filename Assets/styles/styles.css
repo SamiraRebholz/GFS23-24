@@ -1,1 +1,16 @@
 @import url(../fonts/Clash-Grotesk/clashGrotesk.css);
+@import url(../fonts/Roboto-Light/robotoLight.css);
+@import url(./variables.css);
+@import url(../../Features/Navigation/navigation.css);
+
+body * {
+    font-family: 'Roboto Light', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
