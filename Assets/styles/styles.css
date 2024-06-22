@@ -70,3 +70,50 @@ a {
     text-align: right;
 }
 /*------------------*/
+
+/*for symptoms.html*/
+#diagnostic {
+    position: relative;
+    top: 15vh;
+    left: 2%;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  Modernere Schriftart */
+}
+
+#diagnostic table {
+    width: 96%;
+    border-spacing: 0;
+    background-color: var(--secondary-color);
+    /*border: 1px solid var(--primary-color);*/
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+table .link-block {
+    background-color: var(--primary-color-light);
+    color: white;
+    width: 10%;
+    text-align: center;
+    padding: 10px 0; /* Erhöhter Zellabstand */
+    cursor: pointer; /* Cursor ändern, um Interaktivität zu signalisieren */
+}
+
+table td {
+    transition: background-color 0.3s; /* Sanfter Übergang für Hover-Effekt */
+    text-align: center;
+}
+
+table td:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Hover-Effekt für Zeilen */
+}
+
+table td.link-block:hover {
+    color: var(--text-color);
+}
+
+table tr:first-child .link-block {
+    border-radius: 1em 0 0 0;
+}
+
+table tr:last-child .link-block {
+    border-radius: 0 0 0 1em;
+}

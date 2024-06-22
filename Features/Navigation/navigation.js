@@ -3,8 +3,8 @@ class MyNavbar extends HTMLElement {
       this.innerHTML = `
         <nav>
           <ul>
-            <li><a href="/workspaces/GFS23-24/index.html"><img src="./Assets/icons/home.svg" alt="home"></a></li>
-            <li><a href="/workspaces/GFS23-24/Pages/symptoms.html">Diagnostik & Symptome</a></li>
+            <li><a href="./index.html"><img src="../Assets/icons/home.svg" alt="home"></a></li>
+            <li><a href="./symptoms.html">Diagnostik & Symptome</a></li>
             <li><a href="">Pathophysiologie</a></li>
             <li><a href="">Epidemiologie</a></li>
             <li><a href="">Behandlung</a></li>
