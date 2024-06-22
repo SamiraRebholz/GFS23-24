@@ -1,23 +1,27 @@
 @import url(../../Assets/styles/variables.css);
 
 nav {
-    width: 75%;
-    position: fixed;
+    width: 100%;
+    /*position: fixed;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);*/
 }
 
 nav ul {
     background-color: var(--primary-color);
-    width: 100%;
+    width: 75%;
     height: 1rem;
     border-radius: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
+    margin: 1rem;
     font-family: 'ClashGrotesk-Regular', sans-serif;
     list-style: none;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav a {color: var(--secondary-color);}
