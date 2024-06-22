@@ -8,7 +8,7 @@ class MyNavbar extends HTMLElement {
             <li><a href="">Pathophysiologie</a></li>
             <li><a href="">Epidemiologie</a></li>
             <li><a href="">Behandlung</a></li>
-            <li><a href="">Quellen</a></li>
+            <li><a href="./sources.html">Quellen</a></li>
           </ul>
         </nav>
       `;

@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    padding: 0;
+    padding: 15vh 2% 0 2%;
     margin: 0;
     height: 100vh;
 }
@@ -72,12 +72,6 @@ a {
 /*------------------*/
 
 /*for symptoms.html*/
-#diagnostic {
-    position: relative;
-    top: 15vh;
-    left: 2%;
-    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  Modernere Schriftart */
-}
 
 #diagnostic table {
     width: 96%;
