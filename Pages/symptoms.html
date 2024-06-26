@@ -1,65 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Symptome</title>
     <link rel="stylesheet" href="../Assets/styles/styles.css">
+    <link rel="stylesheet" href="../Features/Modal/modal.css">
 </head>
+
 <body>
     <nav>
         <my-navbar></my-navbar>
     </nav>
-<main>
-    <div id="diagnostic">
-        <h1>Diagnostik & Symptome</h1>
-        <table>
-            <tr>
-                <td class="link-block">Link 1</td>
-                <td>test1</td>
-                <td>test2</td>
-                <td>test3</td>
-            </tr>
-            <tr>
-                <td class="link-block">Link 2</td>
-                <td>test4</td>
-                <td>test5</td>
-                <td>test6</td>
-            </tr>
-            <tr>
-                <td class="link-block">Link 3</td>
-                <td>test7</td>
-                <td>test8</td>
-                <td>test9</td>
-            </tr>
-            <tr>
-                <td class="link-block">Link 4</td>
-                <td>test10</td>
-                <td>test11</td>
-                <td>test12</td>
-            </tr>
-            <tr>
-                <td class="link-block">Link 5</td>
-                <td>test13</td>
-                <td>test14</td>
-                <td>test15</td>
-            </tr>
-            <tr>
-                <td class="link-block">Link 6</td>
-                <td>test16</td>
-                <td>test17</td>
-                <td>test18</td>
-            </tr>
-            <tr>
-                <td class="link-block">Link 6</td>
-                <td>test19</td>
-                <td>test20</td>
-                <td>test21</td>
-            </tr>
-        </table>
-    </div>
-</main>
+    <main>
+        <div id="diagnostic">
+            <h1>Diagnostik & Symptome</h1>
+            <br>
+            <h2>Positive klinische Zeichen</h2>
+            <table id="originalTable">
+                <tr>
+                    <td class="modal-opener" data-modal-id="hoover">Hoover Zeichen</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td>test11</td>
+                    <td>test12</td>
+                </tr>
+                <tr>
+                    <td>Link 5</td>
+                    <td>test13</td>
+                    <td>test14</td>
+                    <td>test15</td>
+                </tr>
+                <tr>
+                    <td>Link 6</td>
+                    <td>test16</td>
+                    <td>test17</td>
+                    <td>test18</td>
+                </tr>
+                <tr>
+                    <td>Link 6</td>
+                    <td>test19</td>
+                    <td>test20</td>
+                    <td>test21</td>
+                </tr>
+            </table>
+            <table id="updatedTable" class="hidden">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div style="display: flex; align-items: center;">
+                <p id="preIconText" class="highlight">mFND</p>
+                <img src="../Assets/icons/arrows-right-left.svg" alt="" id="icon" style="margin: 0 10px;">
+                <p id="postIconText">seizureFND</p>
+            </div>
+        </div>
+
+        <h2>Symptome</h2>
+        <div style="display: flex; flex-direction: row; gap: 1rem;">
+            <div class="card">
+                <img src="../Assets/images/dystonia1.jpeg"
+                    alt="">
+                <div class="card-text modal-opener" data-modal-id="dystonia">
+                    Dystonie
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" alt="">
+                <div class="card-text modal-opener" data-modal-id="">
+
+                </div>
+            </div>
+        </div>
+
+        <!--Modals-->
+        <div id="hoover" class="modal">
+            <div class="modal-content">
+                <span class="close"><img src="../Assets/icons/close.svg" alt="x"></span>
+                <div style="display: flex; flex-direction: row; gap: 0.5rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <img src="../Assets/images/hoover1.jpeg"
+                            style="height: 17vmax; width: 17vmax; object-fit: cover;">
+                        <img src="../Assets/images/hoover2.jpeg"
+                            style="height: 17vmax; width: 17vmax; object-fit: cover;">
+                        <caption>*Die Hüftstreckung ist bei direktem Testen schwach (oben), aber die Kraft der
+                            Hüftstreckung wird normal, wenn das gegenüberliegende Bein gegen Widerstand gebeugt wird
+                            (unten).</caption>
+                    </div>
+                    <div>
+                        <p>Das <b>Hoover-Zeichen</b> ist ein diagnostischer Test zur Unterscheidung zwischen einer
+                            Schwäche etwa
+                            durch eine Querschnittslähmung und funktioneller Schwäche der Beine. Es basiert auf der
+                            <b>physiologischen Reaktion</b>, dass bei der Anhebung eines Beins das andere Bein
+                            automatisch nach
+                            unten drückt. Dies wird durch den <b>gekreuzten Streckreflex</b> (crossed extensor
+                            reflex)
+                            ermöglicht,
+                            bei dem die Kontraktion der Muskeln eines Beins die <b>antagonistische Kontraktion</b>
+                            im
+                            anderen Bein
+                            auslöst.
+                        </p>
+                        <p><u>Test der Hüftbeugung (med.: flexion):</u> <br>
+                            <i>Anweisung:</i> Der Pat. wird gebeten, das Schwache Bein anzuheben<br>
+                            <i>Beobachtung:</i> Während der Patient versucht, das rechte Bein anzuheben, legt der
+                            Arzt
+                            seine Hand unter die Ferse des linken Beins. Der Arzt beobachtet, ob das linke Bein
+                            automatisch nach unten drückt. <br>
+                            <i>Ergebnis:</i> Normale Funktion oder organische Hemiparese: Wenn das linke Bein
+                            automatisch
+                            nach unten drückt, spürt der Arzt den Druck auf seiner Hand. Dies zeigt, dass die
+                            Muskeln
+                            normal funktionieren oder dass eine organische Hemiparese vorliegt. Funktionelle
+                            Schwäche:
+                            Wenn kein Druck zu spüren ist, deutet dies auf eine funktionelle Schwäche hin.
+                        </p>
+                        <p><u>Test der Hüftstreckung (med.: extension):</u><br>
+                            <i>Anweisung:</i> Der Pat. wird gebe, dass gesunde/bessere Bein gegen Widerstand zu
+                            beugen.<br>
+                            <i>Beobachtung:</i> Während der Patient das linke Bein gegen Widerstand beugt, legt der
+                            Arzt
+                            seine Hand unter die Ferse des schwachen Beins. Der Arzt beobachtet, ob das schwache
+                            Bein
+                            automatisch nach unten drückt.<br>
+                            <i>Ergebnis:</i> Wenn der Arzt einen Druck auf seiner Hand spürt, der vorher nicht da
+                            war,
+                            deutet dies auf eine inkonsequente Muskelaktivität hin, was auf eine funktionelle
+                            Schwäche
+                            hindeutet. Fehlt dieser Druck, könnte dies auf eine anderweitige Schwäche hindeuten
+                            (z.B.
+                            Querschnittslähmung)
+                        </p>
+                        <p>"The great beauty of Hoover's sign is that it relies on the absence of a normal
+                            phenomenon
+                            found in most people and not the presence of an abnormal phenomenon such as the Babinski
+                            sign."
+                            <br>(Das Schöne am Hoover-Zeichen ist, dass es auf dem Fehlen eines normalen Phänomens
+                            beruht, das bei den meisten Menschen auftritt, und nicht auf dem Vorhandensein eines
+                            anormalen Phänomens wie beim Babinski-Zeichen.)
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dystonia" class="modal">
+            <div class="modal-content">
+                <span class="close"><img src="../Assets/icons/close.svg" alt="x"></span>
+                <p><b>Was ist eine Dystonie?</b><br>
+                    Unter einer Dystonie versteht man eine anhaltende Muskelkontraktion (Muskelanspannung) wodurch die Gliedmaßen in unnormalen "gehalten" werden. <!--Vielleicht noch umformulieren-->
+                    <br>Die Dystonie kann man in 3 Kategorien unterteilen:
+                    <ul>
+                        <li><i>Isoliert</i></li>
+                        <li><i>Kombiniert</i></li>
+                        <li><i>Sekundär</i></li>
+                    </ul>
+                </p>
+                
+            </div>
+        </div>
+    </main>
 
     <script src="../Features/Navigation/navigation.js"></script>
+    <script src="../Features/tableSwitcher/tableSwitcher.js"></script>
+    <script src="../Features/Modal/modal.js"></script>
 </body>
+
 </html>
