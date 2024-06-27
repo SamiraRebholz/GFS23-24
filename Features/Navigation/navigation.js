@@ -16,3 +16,13 @@ class MyNavbar extends HTMLElement {
   }
   
   customElements.define('my-navbar', MyNavbar);
+
+  /*wenn der nutzer 5% der seite gescrollt hat, soll die navbar die klasse .scrolled bekommen*/
+  function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.querySelector("nav>ul").classList.add("scrolled");
+    } else {
+      document.querySelector("nav>ul").classList.remove("scrolled");
+    }
+  }
+  window.onscroll = function() {scrollFunction()};
