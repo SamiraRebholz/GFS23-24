@@ -1,0 +1,200 @@
+@import url(../fonts/Clash-Grotesk/clashGrotesk.css);
+@import url(../fonts/Roboto-Light/robotoLight.css);
+@import url(./variables.css);
+@import url(../../Features/Navigation/navigation.css);
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: 'Roboto Light', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 7vmin 2% 0 2%;
+    margin: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.highlight {
+    font-weight: bold; /* oder eine andere Art der Hervorhebung */
+    background-color: var(--accent-color);
+}
+
+.hidden {
+    display: none;
+}
+.scrolled {
+    background-color: rgba(0, 51, 102, 0.5);
+    backdrop-filter: blur(15px);
+    border: 0.08rem solid white;
+}
+
+/*for index.html*/
+#brain-image {
+    height: 70vmin;
+    position: absolute;
+    /*mittig zentrieren, x und y achse*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.glass-card {
+    background-color: rgba(217, 217, 217, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    border: 0.05rem solid white;
+    height: 45vmin;
+    width: 75vmin;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    /*text horizontal zentrieren*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-block{
+    padding: 0;
+    margin: 0;
+    width: 15vmax;
+}
+
+.bottom-left{
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+}
+
+.top-right {
+    position: absolute;
+    right: 2%;
+    top: 6.5rem;
+    text-align: right;
+}
+/*------------------*/
+
+/*for symptoms.html*/
+
+table {
+    width: 96%;
+    border-spacing: 0;
+    background-color: var(--secondary-color);
+    /*border: 1px solid var(--primary-color);*/
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+table .link-block {
+    background-color: var(--primary-color-light);
+    color: white;
+    width: 10%;
+    text-align: center;
+    padding: 10px 0; /* Erhöhter Zellabstand */
+    cursor: pointer; /* Cursor ändern, um Interaktivität zu signalisieren */
+}
+
+table td {
+    transition: background-color 0.3s; /* Sanfter Übergang für Hover-Effekt */
+    text-align: center;
+    padding: 10px 0; /* Erhöhter Zellabstand */
+}
+
+table td:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Hover-Effekt für Zeilen */
+}
+
+table td.link-block:hover {
+    color: var(--text-color);
+}
+
+table tr:first-child .link-block {
+    border-radius: 1em 0 0 0;
+}
+
+table tr:last-child .link-block {
+    border-radius: 0 0 0 1em;
+}
+#bppm, #odfd{
+    background-color: transparent;
+    border-collapse: collapse;
+    box-shadow: none;
+}
+#bppm, #odfd td{
+    text-align: left;
+}
+#bppm, #odfd td:not(:first-child){
+    padding-left: 1%;
+}
+#bppm ul {
+    list-style-type: none;
+    text-align: left;
+}
+#bppm ul li {
+    padding-bottom: 0.6em;
+}
+/*------------------*/
+
+/*Card-Style*/
+.card {
+    width: 21vmax;
+    height: 25vmax;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(217, 217, 217, 0.2);
+    color: white;
+    font-size: large;
+    backdrop-filter: blur(15px);
+    padding: 0.5em;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .text-block {
+        display: none;
+    }
+}

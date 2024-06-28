@@ -1,0 +1,11 @@
+:root {
+    --text-color: #293133;
+    --primary-color: #003366;
+    --primary-color-light: #0056b3;
+    --secondary-color: #f0f0f0;
+    --accent-color: #28a745;
+    --modal-background-color: rgba(255, 255, 255, 0.75);
+    --modal-text-color: var(--text-color);
+}
+
+

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptome</title>
+    <link rel="stylesheet" href="../Assets/styles/styles.css">
+    <link rel="stylesheet" href="../Features/Modal/modal.css">
+    <link rel="stylesheet" href="../Features/picOverlay/picOverlay.css">
+</head>
+
+<body>
+    <nav>
+        <my-navbar></my-navbar>
+    </nav>
+    <main>
+        <div id="diagnostic">
+            <h1>Diagnostik & Symptome</h1>
+            <br>
+            <h2>Positive klinische Zeichen</h2>
+            <table id="originalTable">
+                <tr>
+                    <td class="modal-opener" data-modal-id="hoover">Hoover Zeichen</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td>test11</td>
+                    <td>test12</td>
+                </tr>
+                <tr>
+                    <td>Link 5</td>
+                    <td>test13</td>
+                    <td>test14</td>
+                    <td>test15</td>
+                </tr>
+                <tr>
+                    <td>Link 6</td>
+                    <td>test16</td>
+                    <td>test17</td>
+                    <td>test18</td>
+                </tr>
+                <tr>
+                    <td>Link 6</td>
+                    <td>test19</td>
+                    <td>test20</td>
+                    <td>test21</td>
+                </tr>
+            </table>
+            <table id="updatedTable" class="hidden">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div style="display: flex; align-items: center;">
+                <p id="preIconText" class="highlight">mFND</p>
+                <img src="../Assets/icons/arrows-right-left.svg" alt="" id="icon" style="margin: 0 10px;">
+                <p id="postIconText">seizureFND</p>
+            </div>
+        </div>
+
+        <h2>Symptome</h2>
+        <div style="display: flex; flex-direction: row; gap: 1rem; flex-wrap: wrap;">
+            <div class="card">
+                <img src="../Assets/images/dystonia1.jpeg" alt="">
+                <div class="card-text modal-opener" data-modal-id="dystonia">
+                    Dystonie
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../Assets/images/facialCard.jpeg" alt="">
+                <div class="card-text modal-opener" data-modal-id="facial">
+                    Fasziale Bewegungsstörungen
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../Assets/images/tremor.jpeg" alt="">
+                <div class="card-text modal-opener" data-modal-id="tremor">
+                    Tremor
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../Assets/images/gait2.jpeg" alt="">
+                <div class="card-text modal-opener" data-modal-id="gait">
+                    Geh-/Gangstörungen
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Assets/images/tic.png" alt="">
+                <div class="card-text modal-opener" data-modal-id="tics">
+                    Tics
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <div class="card-text modal-opener" data-modal-id=""></div>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <div class="card-text modal-opener" data-modal-id=""></div>
+            </div>
+        </div>
+
+        <!--Modals-->
+        <div id="hoover" class="modal">
+            <div class="modal-content">
+                <span class="close"><img src="../Assets/icons/close.svg" alt="x"></span>
+                <div style="display: flex; flex-direction: row; gap: 0.5rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <img src="../Assets/images/hoover1.jpeg"
+                            style="height: 17vmax; width: 17vmax; object-fit: cover;">
+                        <img src="../Assets/images/hoover2.jpeg"
+                            style="height: 17vmax; width: 17vmax; object-fit: cover;">
+                        <caption>*Die Hüftstreckung ist bei direktem Testen schwach (oben), aber die Kraft der
+                            Hüftstreckung wird normal, wenn das gegenüberliegende Bein gegen Widerstand gebeugt wird
+                            (unten).</caption>
+                    </div>
+                    <div>
+                        <p>Das <b>Hoover-Zeichen</b> ist ein diagnostischer Test zur Unterscheidung zwischen einer
+                            Schwäche etwa
+                            durch eine Querschnittslähmung und funktioneller Schwäche der Beine. Es basiert auf der
+                            <b>physiologischen Reaktion</b>, dass bei der Anhebung eines Beins das andere Bein
+                            automatisch nach
+                            unten drückt. Dies wird durch den <b>gekreuzten Streckreflex</b> (crossed extensor
+                            reflex)
+                            ermöglicht,
+                            bei dem die Kontraktion der Muskeln eines Beins die <b>antagonistische Kontraktion</b>
+                            im
+                            anderen Bein
+                            auslöst.
+                        </p>
+                        <p><u>Test der Hüftbeugung (med.: flexion):</u> <br>
+                            <i>Anweisung:</i> Der Pat. wird gebeten, das Schwache Bein anzuheben<br>
+                            <i>Beobachtung:</i> Während der Patient versucht, das rechte Bein anzuheben, legt der
+                            Arzt
+                            seine Hand unter die Ferse des linken Beins. Der Arzt beobachtet, ob das linke Bein
+                            automatisch nach unten drückt. <br>
+                            <i>Ergebnis:</i> Normale Funktion oder organische Hemiparese: Wenn das linke Bein
+                            automatisch
+                            nach unten drückt, spürt der Arzt den Druck auf seiner Hand. Dies zeigt, dass die
+                            Muskeln
+                            normal funktionieren oder dass eine organische Hemiparese vorliegt. Funktionelle
+                            Schwäche:
+                            Wenn kein Druck zu spüren ist, deutet dies auf eine funktionelle Schwäche hin.
+                        </p>
+                        <p><u>Test der Hüftstreckung (med.: extension):</u><br>
+                            <i>Anweisung:</i> Der Pat. wird gebe, dass gesunde/bessere Bein gegen Widerstand zu
+                            beugen.<br>
+                            <i>Beobachtung:</i> Während der Patient das linke Bein gegen Widerstand beugt, legt der
+                            Arzt
+                            seine Hand unter die Ferse des schwachen Beins. Der Arzt beobachtet, ob das schwache
+                            Bein
+                            automatisch nach unten drückt.<br>
+                            <i>Ergebnis:</i> Wenn der Arzt einen Druck auf seiner Hand spürt, der vorher nicht da
+                            war,
+                            deutet dies auf eine inkonsequente Muskelaktivität hin, was auf eine funktionelle
+                            Schwäche
+                            hindeutet. Fehlt dieser Druck, könnte dies auf eine anderweitige Schwäche hindeuten
+                            (z.B.
+                            Querschnittslähmung)
+                        </p>
+                        <p>"The great beauty of Hoover's sign is that it relies on the absence of a normal
+                            phenomenon
+                            found in most people and not the presence of an abnormal phenomenon such as the Babinski
+                            sign."
+                            <br>(Das Schöne am Hoover-Zeichen ist, dass es auf dem Fehlen eines normalen Phänomens
+                            beruht, das bei den meisten Menschen auftritt, und nicht auf dem Vorhandensein eines
+                            anormalen Phänomens wie beim Babinski-Zeichen.)
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dystonia" class="modal">
+            <div class="modal-content">
+                <span class="close"><img src="../Assets/icons/close.svg" alt="x"></span>
+                <p><b>Was ist eine Dystonie?</b><br>
+                    Funktionelle Dystonie (FD) ist eine Bewegungsstörung, bei der es zu unkontrollierten
+                    Muskelkontraktionen kommt, die zu verdrehten Bewegungen und abnormen Körperhaltungen führen, oft
+                    begleitet von Schmerzen <br>
+                    <img src="./Assets/images/dystonieBild.jpg" alt="" style="height: 5rem; width: auto;">
+                </p>
+                <p><b>Geschlecht, Alter und Häufigkeit:</b><br> FD ist bei Frauen häufiger als bei Männern. Das
+                    durchschnittliche Erkrankungsalter ist zwischen 29 und 50 Jahren. Kinder sind deutlich weniger
+                    betroffen (2-5/100.000; bei Kindern aber auch deutlich weniger Studien). Hier liegt das
+                    durchschnittliche Erkrankungsalter bei 11-14 Jahren.</p>
+
+                <p><b>Organische Dystonie (OD) versus Funktionelle Dystonie (FD):</b>
+                <table id="odfd">
+                    <tr>
+                        <td></td>
+                        <td>Organische Dystonie</td>
+                        <td>Funktionelle Dystonie</td>
+                    </tr>
+                    <tr>
+                        <td>Ursache</td>
+                        <td>Meist durch genetische oder neurologische Probleme.</td>
+                        <td>Keine erkennbare körperliche Ursache. Softwear statt Hardwear Problem</td>
+                    </tr>
+                    <tr>
+                        <td>Symptome</td>
+                        <td>Entwickeln sich langsam und sind konstant.</td>
+                        <td>Treten plötzlich auf und können stark variieren.</td>
+                    </tr>
+                    <tr>
+                        <td>Behandlung</td>
+                        <td>Medikamente und Physiotherapie helfen oft.</td>
+                        <td>Fokus auf Physiotherapie, psychologische Unterstützung und Techniken zur Stressbewältigung.
+                        </td>
+                    </tr>
+                </table>
+                </p>
+                <p><b>Biopsychosoziales Modell (übertragbar auf FMD allgemein):</b>
+                <table id="bppm">
+                    <tr>
+                        <td></td>
+                        <td>Biologisch</td>
+                        <td>Psychisch</td>
+                        <td>Psychosozial</td>
+                    </tr>
+                    <tr>
+                        <td>Prädisposition</td>
+                        <td>
+                            <ul>
+                                <li>Weiblich</li>
+                                <li>geistige Behinderung</li>
+                                <li>komorbide neurolgische Erkrankungen</li>
+                                <li>komorbide funktionelle Störungen</li>
+                                <li>sensorische Verarbeitungsstörungen</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>komorbide Stimmungs- und Angststörungen</li>
+                                <li>PTBS</li>
+                                <li>Persönlichkeitsstörungen</li>
+                                <li>Dissoziative Störungen</li>
+                                <li>Alexithymie</li>
+                                <li>unsichere Bindung</li>
+                                <li>Temperament und maladaptive Persönlichkeitsmerkmale (z.B. zwanghaft, Neurotizismus)
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Familienfunktion/Kindesvernachlässigung</li>
+                                <li>chronische Erkrankung in der Familie</li>
+                                <li>traumatischer Tod in der Familie</li>
+                                <li>negative Lebenserfahrungen</li>
+                                <li>physischer/sexueller/emotionaler Missbrauch</li>
+                                <li>finanzielle Schwierigkeiten</li>
+                                <li>unzureichende soziale Unterstützung</li>
+                                <li>Einstellungen gegenüber Gesundheit und Krankheit</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Auslösend</td>
+                        <td>
+                            <ul>
+                                <li>Schlafmangel/-entzug</li>
+                                <li>Schlafparalyse</li>
+                                <li>Hyperventilation</li>
+                                <li>Palpitationen</li>
+                                <li>akuter Schmerz</li>
+                                <li>periphere Gliedmaßenverletzung oder Kopftrauma</li>
+                                <li>Schwindel durch vestibuläres Ereignis</li>
+                                <li>chirurgischer Eingriff</li>
+                                <li>initiale motorische Kompensation nach einer Verletzung (z. B. zur Vermeidung von
+                                    Schmerzen)</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Emotionale Reaktionen auf Verletzungen oder Lebensereignisse</li>
+                                <li>PTBS Trigger oder Flashback</li>
+                                <li>Wahrnehmung des Ereignisses als traumatisch/negativ</li>
+                                <li>dissoziativer Zustand</li>
+                                <li>Panikattacke</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Verlust des Arbeitsplatzes oder andere berufliche Schwierigkeiten</li>
+                                <li>Scheidung oder eheliche Belastung</li>
+                                <li>Traumatischer Tod eines geliebten Menschen</li>
+                                <li>anderer Beziehungsstress</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Erhaltend</td>
+                        <td>
+                            <ul>
+                                <li>körperliche Anspannung</li>
+                                <li>chronische Schmerzen</li>
+                                <li>chronische Erschöpfung</li>
+                                <li>Abnorme Bildung motorischer Gewohnheiten</li>
+                                <li>Dekonditionierung</li>
+                                <li>andere medizinische/neurologische Begleiterkrankungen, die die Behandlung
+                                    einschränken</li>
+                                <li>sekundäre Kontrakturen</li>
+                                <li>Risiko bei kontinuierlicher fester Haltung: irreversible motorische Veränderungen
+                                    möglich</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Negative Erwartungsverzerrung</li>
+                                <li>Negative Aufmerksamkeitsverzerrung</li>
+                                <li>Krankheitsüberzeugungen: wahrnehmung Symptome als irreversibel oder anders
+                                    verursacht</li>
+                                <li>Angst zu versagen</li>
+                                <li>"Ohne Schmerz kein Gewinn"</li>
+                                <li>Vermeidung Symptomverschlimmerung (--> Schonhaltung)</li>
+                                <li>Hypervigilanz und Dissoziation</li>
+                                <li>fehlende Krankheitsakzeptanz</li>
+                                <li>nicht geglaubt fühlen</li>
+                                <li>Maladaptive Verhaltensweisen (Abhängigkeit von Gehhilfen/Rollstuhl etc.)</li>
+                                <li>Identität an Produktivität gebunden</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Diagnostische Unsicherheit (unklare Diagnose und laufende Untersuchungen)</li>
+                                <li>Soziale Vorteile (oft unbewusst)</li>
+                                <li>Abhängigkeit von Pflege- und Behindertenleistungen</li>
+                                <li>Laufende Rechtsstreitigkeiten und Entschädigungsansprüche</li>
+                                <li>Arbeitsunfallentschädigung</li>
+                                <li>Schlechte Pflegekoordination</li>
+                                <li>Schlechte familiäre Unterstützung</li>
+                                <li>Dringlichkeit, zur Arbeit zurückzukehren</li>
+                                <li>Anhaltende soziale Schwierigkeiten (Beziehungen, Finanzen etc.)</li>
+                                <li>soziale Stigmatisierung</li>
+                                <li>Rolle in Selbsthilfegruppen</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                </p>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../Features/Navigation/navigation.js"></script>
+    <script src="../Features/tableSwitcher/tableSwitcher.js"></script>
+    <script src="../Features/Modal/modal.js"></script>
+    <script src="../Features/picOverlay/picOverlay.js"></script>
+</body>
+
+</html>
