@@ -37,7 +37,7 @@ a {
 .scrolled {
     background-color: rgba(0, 51, 102, 0.5);
     backdrop-filter: blur(15px);
-    border: 0.1rem solid white;
+    border: 0.08rem solid white;
 }
 
 /*for index.html*/
@@ -91,7 +91,7 @@ a {
 
 /*for symptoms.html*/
 
-#diagnostic table {
+table {
     width: 96%;
     border-spacing: 0;
     background-color: var(--secondary-color);
@@ -130,18 +130,29 @@ table tr:first-child .link-block {
 table tr:last-child .link-block {
     border-radius: 0 0 0 1em;
 }
-
-
-@media (max-width: 700px) {
-    .text-block {
-        display: none;
-    }
+#bppm, #odfd{
+    background-color: transparent;
+    border-collapse: collapse;
+    box-shadow: none;
+}
+#bppm, #odfd td{
+    text-align: left;
+}
+#bppm, #odfd td:not(:first-child){
+    padding-left: 1%;
+}
+#bppm ul {
+    list-style-type: none;
+    text-align: left;
+}
+#bppm ul li {
+    padding-bottom: 0.6em;
 }
 /*------------------*/
 
 /*Card-Style*/
 .card {
-    width: 20vmax;
+    width: 21vmax;
     height: 25vmax;
     border: 1px solid #ccc;
     border-radius: 1em;
@@ -152,6 +163,7 @@ table tr:last-child .link-block {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 .card-text {
     position: absolute;
@@ -168,4 +180,21 @@ table tr:last-child .link-block {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .text-block {
+        display: none;
+    }
 }

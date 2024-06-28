@@ -13,7 +13,7 @@
 }
   
 .modal-content {
-  background-color: rgba(217, 217, 217, 0.2);
+  background-color: rgba(217, 217, 217, 0.3);
   backdrop-filter: blur(15px);
   color: var(--text-color);
   margin: 5% auto;
