@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Schritt 1: Füge Event-Listener zu allen Bildern innerhalb von .card Elementen hinzu
-    document.querySelectorAll('img:not(.close)').forEach(function(img) {
+    document.querySelectorAll('img:not(.close img)').forEach(function(img) {
         img.addEventListener('click', function() {
             // Schritt 2: Erstelle ein neues div Element für das Overlay
             var overlay = document.createElement('div');
@@ -26,12 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Schritt 6: Füge das Overlay zum body der Seite hinzu
             document.body.appendChild(overlay);
-        });
-    });
-
-    document.querySelectorAll('.close').forEach(function(closeBtn) {
-        closeBtn.addEventListener('click', function(event) {
-            event.stopPropagation();
         });
     });
 });
