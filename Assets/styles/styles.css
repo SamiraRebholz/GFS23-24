@@ -130,18 +130,18 @@ table tr:first-child .link-block {
 table tr:last-child .link-block {
     border-radius: 0 0 0 1em;
 }
-#bppm, #odfd{
+.modal-table{
     background-color: transparent;
     border-collapse: collapse;
     box-shadow: none;
 }
-#bppm, #odfd td{
+.modal-table td{
     text-align: left;
 }
-#bppm, #odfd td:not(:first-child){
+.modal-table td:not(:first-child){
     padding-left: 1%;
 }
-#bppm ul {
+.modal-table ul {
     list-style-type: none;
     text-align: left;
 }

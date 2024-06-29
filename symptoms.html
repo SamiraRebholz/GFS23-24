@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Assets/styles/styles.css">
     <link rel="stylesheet" href="../Features/Modal/modal.css">
     <link rel="stylesheet" href="../Features/picOverlay/picOverlay.css">
+    <link rel="stylesheet" href="./Features/Terminology/terminology.css">
 </head>
 
 <body>
@@ -103,7 +104,7 @@
             </table>
             <div style="display: flex; align-items: center;">
                 <p id="preIconText" class="highlight">mFND</p>
-                <img src="../Assets/icons/arrows-right-left.svg" alt="" id="icon" style="margin: 0 10px;">
+                <img src="../Assets/icons/arrows-right-left.svg" alt="" class="noOverlay" id="icon" style="margin: 0 10px;">
                 <p id="postIconText">seizureFND</p>
             </div>
         </div>
@@ -239,7 +240,7 @@
                     durchschnittliche Erkrankungsalter bei 11-14 Jahren.</p>
 
                 <p><b>Organische Dystonie (OD) versus Funktionelle Dystonie (FD):</b>
-                <table id="odfd">
+                <table id="odfd" class="modal-table">
                     <tr>
                         <td></td>
                         <td>Organische Dystonie</td>
@@ -264,7 +265,7 @@
                 </table>
                 </p>
                 <p><b>Biopsychosoziales Modell (übertragbar auf FMD allgemein):</b>
-                <table id="bppm">
+                <table id="bppm" class="modal-table">
                     <tr>
                         <td></td>
                         <td>Biologisch</td>
@@ -394,12 +395,15 @@
 
             </div>
         </div>
+        <div id="openTerminology"><img src="./Assets/icons/question.svg" alt="" class="noOverlay"></div>
+        <terminology-modal></terminology-modal>
     </main>
 
     <script src="../Features/Navigation/navigation.js"></script>
     <script src="../Features/tableSwitcher/tableSwitcher.js"></script>
     <script src="../Features/Modal/modal.js"></script>
     <script src="../Features/picOverlay/picOverlay.js"></script>
+    <script src="../Features/Terminology/terminology.js"></script>
 </body>
 
 </html>

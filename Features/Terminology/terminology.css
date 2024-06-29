@@ -1,0 +1,20 @@
+#openTerminology {
+    height: 5vmax;
+    width: 5vmax;
+    border-radius: 50%;
+    position: sticky;
+    bottom: 1vmin;
+    left: 1vmin;
+    background-color: rgba(0, 51, 102, 0.5);
+    backdrop-filter: blur(10px);
+    border: 0.08rem solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999; /*we don't talk about this...*/
+}
+
+#terminologyModal .modal-content {
+    background-color: rgba(0, 51, 102, 0.5);
+    color: white;
+}
