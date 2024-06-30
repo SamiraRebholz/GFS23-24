@@ -20,7 +20,7 @@
             <h1>Diagnostik & Symptome</h1>
             <br>
             <h2>Positive klinische Zeichen</h2>
-            <table id="originalTable">
+            <table class="table1" data-table-id="1">
                 <tr>
                     <td class="modal-opener" data-modal-id="hoover">Hoover Zeichen</td>
                     <td></td>
@@ -64,7 +64,7 @@
                     <td>test21</td>
                 </tr>
             </table>
-            <table id="updatedTable" class="hidden">
+            <table class="hidden table2" data-table-id="1">
                 <tr>
                     <td></td>
                     <td></td>
@@ -103,10 +103,10 @@
                 </tr>
             </table>
             <div style="display: flex; align-items: center;">
-                <p id="preIconText" class="highlight">mFND</p>
-                <img src="../Assets/icons/arrows-right-left.svg" alt="" class="noOverlay" id="icon"
+                <p class="highlight text-before" data-table-id="1">mFND</p>
+                <img src="../Assets/icons/arrows-right-left.svg" alt="" class="noOverlay" class="icon" data-table-id="1"
                     style="margin: 0 10px;">
-                <p id="postIconText">seizureFND</p>
+                <p class="text-after" data-table-id="1">seizureFND</p>
             </div>
         </div>
 
@@ -410,9 +410,8 @@
                     möglich (11,9%).
                 </p>
                 <p>
-
-                <table class="modal-table">
                     <b>Phänotypen:</b><br>
+                <table class="modal-table table1" data-table-id="2">
                     <tr>
                         <td><u>Phänotyp</u></td>
                         <td><u>Beschreibung</u></td>
@@ -480,9 +479,8 @@
                             nahegelegene Wände oder Möbel</td>
                     </tr>
                 </table>
-
-                <table class="modal-table">
                     <b>Neurologische Erkrankungen nachahmende Phänotypen:</b><br>
+                <table class="modal-table table2" data-table-id="2">
                     <tr>
                         <td><u>Phänotyp</u></td>
                         <td><u>Beschreibung</u></td>
@@ -539,6 +537,7 @@
                         <td>Dropping of the forefoot at initial swing or mid-swing </td>
                     </tr>
                 </table>
+                
                 </p>
                 <p><b>Diagnostik:</b><br>
                     FGD sollte wenn möglich durch positive klinische Zeichnen diagnostiziert werden. Hier ist zum
