@@ -9,6 +9,7 @@ class MyNavbar extends HTMLElement {
             <li><a href="">Epidemiologie</a></li>
             <li><a href="">Behandlung</a></li>
             <li><a href="./sources.html">Quellen</a></li>
+            <li><img src="../Assets/icons/settings.svg" class="noOverlay"></li>
           </ul>
         </nav>
       `;

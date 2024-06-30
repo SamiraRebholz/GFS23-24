@@ -134,7 +134,8 @@
             </div>
 
             <div class="card">
-                <img src="../Assets/images/gait2.jpeg" alt="">
+                <!--<img src="../Assets/images/gait2.jpeg" alt="">-->
+                <video src="./Assets/videos/gaitVid.mov" autoplay loop muted></video>
                 <div class="card-text modal-opener" data-modal-id="gait">
                     Geh-/Gangstörungen
                 </div>
@@ -403,14 +404,15 @@
                     Es gibt viele verschiedene Möglichkeiten, wie sich FGD äußern kann, sogenannte "Phänotypen". Diese
                     können alleine auftreten, häufig sind jedoch mehrere Phänotypen kombiniert. Ebenfalls treten bei FGD
                     häufig auch andere funktionelle (non-motor) und funktionell-motorische Symptome auf. <br>
-                    <img src="./Assets/images/gait3.jpg" alt="" class="miniImg"><br>
+                    <img src="./Assets/images/gait3.jpg" alt="" class="miniImg">
+                    <!--<video src="./Assets/videos/gaitVid.mov" controls class="miniImg"></video>-->
+                    <br>
                     Die am häufigsten genannten nicht motorischen Symptome sind Angststörungen (52,1%), Fatigue (45,1%)
                     und Schmerzen (41,9%).
                     <br>Aber auch eine Komorbidität einer anderen neurologischen Erkrankung ist
                     möglich (11,9%).
                 </p>
                 <p>
-                    <b>Phänotypen:</b><br>
                 <table class="modal-table table1" data-table-id="2">
                     <tr>
                         <td><u>Phänotyp</u></td>
@@ -479,8 +481,7 @@
                             nahegelegene Wände oder Möbel</td>
                     </tr>
                 </table>
-                    <b>Neurologische Erkrankungen nachahmende Phänotypen:</b><br>
-                <table class="modal-table table2" data-table-id="2">
+                <table class="hidden modal-table table2" data-table-id="2">
                     <tr>
                         <td><u>Phänotyp</u></td>
                         <td><u>Beschreibung</u></td>
@@ -537,13 +538,111 @@
                         <td>Dropping of the forefoot at initial swing or mid-swing </td>
                     </tr>
                 </table>
-                
+                <div style="display: flex; align-items: center;">
+                    <p class="highlight text-before" data-table-id="2">Phänotypen</p>
+                    <img src="../Assets/icons/arrows-right-left.svg" alt="" class="noOverlay" class="icon"
+                        data-table-id="2" style="margin: 0 10px;">
+                    <p class="text-after" data-table-id="2">Neurologische Erkrankungen nachahmende Phänotypen</p>
+                </div>
                 </p>
                 <p><b>Diagnostik:</b><br>
                     FGD sollte wenn möglich durch positive klinische Zeichnen diagnostiziert werden. Hier ist zum
                     Beispiel das Hoover Zeichen anwendbar. Ebenfalls kann die Diagnose durch Inkonsistenz und
                     Inkongruenz gestellt beziehungsweise gestützt werden.
                 </p>
+            </div>
+        </div>
+        <div id="tics" class="modal">
+            <div class="modal-content">
+                <span class="close"><img src="../Assets/icons/close.svg" alt="x"></span>
+                <p><b>Was sind Tics?</b><br>
+                    Tics sind definiert als plötzliche, schnelle, wiederkehrende Bewegungen oder Geräusche, die nicht
+                    rhythmisch sind.
+                </p>
+                <p><b>Wie äußern sich funktionelle Tics?</b>
+                    Die Symptome an sich sind sehr ähnlich wie die von beispielsweise Tourette. Der größte Unterschied
+                    liegt im Erkrankungsalter. Tourette beginnt bereits in der frühen Kindheit, während funktionelle
+                    Tics meistens erst ab einem Alter von 10-11 Jahren. Manchmal treten sie auch im Erwachsenenalter das
+                    erste Mal auf.
+                <div style="display: flex; flex-direction: row; gap: 2vmax;">
+                    <img src="./Assets/images/tic2.png" alt="" style="height: 18vmax; width: auto;">
+                    <div style="display: flex; flex-direction: column;">
+                        <ul>
+                            <li>Links: wie sich funktionelle Tics äußern</li>
+                            <li>Mitte: welche Gemeinsamkeiten funktionelle Tics und Tourette haben</li>
+                            <li>Rechts: wie sich Tourette äußert</li>
+                        </ul>
+                        <p>
+                            Anhand dieser Anzeichen kann zwischen funktionellen Tics und Tourette unterschieden werden.
+                            <br>
+                            Dadurch wird auch die Diagnose gestellt sowie eine Fehldianose vermieden.
+                        </p>
+                    </div>
+
+
+                </div>
+                </p>
+                <p><b>Mögliche Komorbiditäten:</b><br>
+                <ul>
+                    <li>Fatigue</li>
+                    <li>Angststörungen</li>
+                    <li>Depressionen</li>
+                    <li>PTBS</li>
+                    <li>chronische Nacken/Rückenschmerzen</li>
+                    <li>atypische Brustschmerzen</li>
+                    <li>Fibromyalgie</li>
+                    <li>funktionelle Dystonie</li>
+                    <li>funktioneller Tremor</li>
+                    <li>Reizdarmsyndrom</li>
+                    <li>CRPS (komplexes regionales Schmerzsyndrom)</li>
+                    <li>chronische Beckenschmerzen</li>
+                    <li>funktionelle Gliedmaßenschwäche</li>
+                    <li>sensorische Störungen</li>
+                </ul>
+                </p>
+                <details>
+                    <summary><b>Sarah's Geschichte</b></summary>
+                    Sarah ist 13 Jahre alt und interessiert sich für Tanz, Kunst und Schauspiel. In den letzten 4 Wochen
+                    hat sie plötzlich einsetzende, dauerhafte motorische Tics in ihren Armen und Beinen erlebt. Diese
+                    waren mit jaulenden Geräuschen und einigen Tierlauten sowie einer Tendenz zum Fluchen gegenüber
+                    ihrer jüngeren Schwester und scheinbar unkontrolliertem Ausrasten verbunden. Diese Erfahrung war für
+                    sie sehr belastend, und sie war mehrmals in der Notaufnahme, aber niemand schien zu wissen, was zu
+                    tun ist. Sie fühlte sich zu verlegen, um mit ihren Freunden darüber zu sprechen.
+                    <br><br>
+                    Sarah hat einen jüngeren Bruder im Alter von 5 Jahren mit einer Diagnose aus dem Autismus-Spektrum.
+                    Sie beschreibt sich selbst als schüchtern und sozial ängstlich, und ihre Eltern sagen, sie sei eine
+                    „Perfektionistin“. 
+                    <br><br>
+                    Die Tics haben dazu geführt, dass sie nicht zur Schule gehen konnte und viel Zeit
+                    allein in ihrem Schlafzimmer verbracht hat. Sie hat Zeit damit verbracht, soziale Medien zu
+                    durchstöbern und wegen ihrer Symptome nach Tourette-Seiten zu suchen. Kürzlich hatte sie den Mut,
+                    ein TikTok-Video über ihre Erfahrungen zu machen. Sie hat einen Onkel mit einigen Tics und
+                    Zwangsstörungen (OCD).
+                    <br><br>
+                    Rückblickend hatte Sarah im Alter von etwa 5 Jahren einige subtile Tics, aber alle dachten, sie
+                    hätten sich gelegt, und niemand hatte sie seit vielen Jahren bemerkt.
+                    <br><br>
+                    In Sarahs Fall hatten ihre Tics hauptsächlich Merkmale von funktionellen Tics. Sie betrafen
+                    insbesondere ihre Arme und ihren Körper. Sie konnte die Tics nicht unterdrücken, nicht einmal für
+                    ein paar Sekunden, und sie hatte nicht das übliche „Warnsignal“, das Menschen mit Tourette-Syndrom
+                    haben. Die Tatsache, dass sie plötzlich und heftig im Alter von 13 Jahren auftraten, war ebenfalls
+                    typisch für funktionelle Tics und nicht für das Tourette-Syndrom. 
+                    <br><br>
+                    Sarahs Ärzte dachten, dass sie
+                    wahrscheinlich milde Tics als Kind hatte, die sie anfällig für die Entwicklung funktioneller Tics
+                    machten.
+                    <br><br>
+                    Während der Behandlung stellte sich heraus, dass einige Dinge in der Schule stressig waren, mit
+                    Gruppenzwang, und Sarah fühlte sich panisch wegen ihrer Schulaufgaben, obwohl sie eine
+                    ausgezeichnete Schülerin war. 
+                    <br><br>
+                    Sarah hatte Psychotherapie, die ihr half, über ihre
+                    Gefühle zu sprechen und mit Gefühlen von Sorge und Panik umzugehen. Sie lernte auch Techniken, die
+                    ihr halfen, sich abzulenken, wenn die Tics stark waren, und allmählich verbesserten sich die
+                    Bewegungen, sodass sie wieder zur Schule gehen konnte. Sie hatte immer noch ab und zu einen Tic,
+                    aber das war beherrschbar.
+                    <br><br>*übersetzt Englisch --> Deutsch durch ChatGPT (<u><a href="https://neurosymptoms.org/en/symptoms/fnd-symptoms/functional-tics/#:~:text=explanations%20may%20vary.-,Sarah%E2%80%99s%20story,-Sarah%20is%20a">Original</a></u>)
+                </details>
             </div>
         </div>
         <div id="openTerminology"><img src="./Assets/icons/question.svg" alt="" class="noOverlay"></div>
