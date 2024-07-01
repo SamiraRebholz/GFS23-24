@@ -18,3 +18,21 @@
     background-color: rgba(0, 51, 102, 0.5);
     color: white;
 }
+
+#searchInput {
+    width: 45%;
+    background-color: rgba(0, 51, 102, 0.35);
+    color: white;
+    border: 0.08rem solid white;
+    border-radius: 1rem;
+    padding: 0.45rem;
+}
+#searchInput::placeholder {
+    color: white;
+}
+#searchInput:focus {
+    outline: none;
+}
+#searchIcon {
+    margin-left: 0.5rem;
+}

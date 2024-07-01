@@ -1,71 +1,43 @@
-/*class TerminologyModal extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <div class="modal" id="terminologyModal" style="display: none;">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Terminologie</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
-        `;
-    }
-} customElements.define('terminology-modal', TerminologyModal);
-
-const modal = document.getElementById('terminologyModal');
-const modalOpener = document.getElementById('openTerminology');
-const closeButton = document.querySelector('.close');
-
-// Wenn auf modalOpener geklickt wird, wird das Modal angezeigt
-modalOpener.addEventListener('click', function() {
-    modal.style.display = "block";
-});
-
-// Wenn auf closeButton geklickt wird, wird das Modal geschlossen
-closeButton.addEventListener('click', function() {
-    modal.style.display = "none";
-});*/
 class TerminologyModal extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div class="modal" id="terminologyModal" style="display: none;">
             <div class="modal-content">
                 <span class="close"><img src="../Assets/icons/closeWhite.svg"></span>
-                <h2>Terminologie</h2>
-                <table class="modal-table">
+                <h2>Terminologie</h2> 
+                <table class="modal-table" id="terminologyModal">
                     <tr>
-                        <td>Terminologie/Fachbegriff</td>
-                        <td>Bedeutung</td>
+                        <td><b>Terminologie/Fachbegriff</b></td>
+                        <input type="text" id="searchInput" placeholder="Search..."><img src="../Assets/icons/search.svg" id="searchIcon">
+                        <td><b>Bedeutung</b></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Abduktion</td>
+                        <td>Die Bewegung weg von der Mittellinie des Körpers</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Adduktion</td>
+                        <td>Die Bewegung zur Mittellinie des Körpers</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Synergie</td>
+                        <td>Das Zusammenwirken von verschiedenen Organen, Muskeln, etc.</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>antagonistisch</td>
+                        <td>gegensätzlich, widerstreitend</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Kontraktion</td>
+                        <td>Das aktive Zusammenziehen oder Anspannen deiner Muskeln</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Flexion</td>
+                        <td>Die Beugung eines Gelenks</td>
+                    </tr>
+                    <tr>
+                        <td>Extension</td>
+                        <td>Aktive oder passive Streckbewegung eines Gelenks</td>
                     </tr>
             </div>
         </div>
@@ -91,3 +63,42 @@ modalOpener.addEventListener('click', () => {
     document.querySelector('terminology-modal').show();
     console.log('Modal opened');
 });
+
+//suchfunktion für inhalt der tabelle, input ist #searchInput, trigger ist #searchIcon oder drücken der enter taste, tabelle ist #terminologyModal; nicht case sensitive; wird ein treffer, soll zu dieser zeile der tabelle gegangen werden und kurz (2sec) blinken
+document.getElementById('searchIcon').addEventListener('click', searchTable);
+document.getElementById('searchInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        searchTable();
+    }
+});
+
+function searchTable() {
+    let input = document.getElementById('searchInput').value;
+    let table = document.getElementById('terminologyModal');
+    let tr = table.getElementsByTagName('tr');
+
+    for (let i = 0; i < tr.length; i++) {
+        let td = tr[i].getElementsByTagName('td');
+        for (let j = 0; j < td.length; j++) {
+            let txtValue = td[j].textContent || td[j].innerText;
+            if (txtValue.toUpperCase().indexOf(input.toUpperCase()) > -1) {
+                tr[i].style.backgroundColor = 'rgba(0, 51, 102, 0.35)';
+                setTimeout(() => {
+                    tr[i].style.backgroundColor = 'transparent';
+                }, 1000);
+                break;
+            }
+        }
+    }
+}
+
+//inhalt des inputs leeren sobald entweder enter oder #searchIcon geklickt wird
+document.getElementById('searchIcon').addEventListener('click', clearInput);
+document.getElementById('searchInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        clearInput();
+    }
+});
+function clearInput() {
+    document.getElementById('searchInput').value = '';
+}
